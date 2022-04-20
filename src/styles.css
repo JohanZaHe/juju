@@ -17,11 +17,6 @@ body {
     overflow: hidden !important;
 }
 
-/* 
-    ##Device = Most of the Smartphones Mobiles (Portrait)
-    ##Screen = B/w 320px to 479px
-  */
-
 @media (min-width: 320px) and (max-width: 480px) {
     .mat-drawer-inner-container {
         justify-content: start;
