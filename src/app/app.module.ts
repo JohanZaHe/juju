@@ -22,6 +22,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { LocationDetailsComponent } from './dialogs/containers/location-details/location-details.component';
 import { FetchDataPipe } from './pipes/fetch-data.pipe';
 import { MatDialogModule } from '@angular/material/dialog';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     FooterComponent,
     LocationDetailsComponent,
     FetchDataPipe,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
