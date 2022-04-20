@@ -1,0 +1,46 @@
+<mat-card class="d-flex flex-row flex-wrap align-items-center">
+  <div
+    class="mat-card-avatar cursor"
+    [style.background-image]="'url(' + character.image + ')'"
+    (click)="viewCharacterDetails()"
+  ></div>
+  <div class="p-2 d-flex flex-column charater-column-size">
+    <b class="title-column">Name</b>
+    <span class="detail-column">{{ character.name }}</span>
+  </div>
+  <div class="p-2 d-flex flex-column charater-column-size">
+    <b class="title-column">Status</b>
+    <span class="detail-column">{{ character.status }}</span>
+  </div>
+  <div class="p-2 d-flex flex-column charater-column-size">
+    <b class="title-column">Species</b>
+    <span class="detail-column">{{ character.species }}</span>
+  </div>
+  <div class="p-2 d-flex flex-column charater-column-size">
+    <b class="title-column">First Episode</b>
+    <span
+      class="text-truncate detail-column"
+      [matTooltip]="
+        character.episode && character.episode[0]
+          ? (character.episode[0] | fetchData: 'name' | async)
+          : ''
+      "
+      >{{
+        character.episode && character.episode[0]
+          ? (character.episode[0] | fetchData: "name" | async)
+          : ""
+      }}</span
+    >
+  </div>
+  <div class="p-2 d-flex flex-column charater-column-size">
+    <b class="title-column">Last Location</b>
+    <span
+      class="text-truncate detail-column cursor"
+      [matTooltip]="character.location ? character.location.name : ''"
+      (click)="
+        viewLocationDetails(character.location ? character.location.url : '')
+      "
+      >{{ character.location ? character.location.name : "" }}</span
+    >
+  </div>
+</mat-card>

@@ -1,0 +1,13 @@
+.mat-card-avatar-details {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    object-fit: cover;
+    background-size: cover;
+}
+
+.charater-details-column-size {
+    max-width: 50%;
+    min-width: 50%
+}

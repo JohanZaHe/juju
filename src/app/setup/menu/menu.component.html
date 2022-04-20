@@ -1,0 +1,16 @@
+<nav>
+  <ul class="menu">
+    <li *ngFor="let link of navLinks">
+      <a
+        mat-tab-link
+        [routerLink]="link.path"
+        routerLinkActive="active-menu-opt"
+        #rla="routerLinkActive"
+        [active]="rla.isActive"
+        class="menu-opt"
+      >
+        <mat-icon> {{ link.icon }}</mat-icon>
+      </a>
+    </li>
+  </ul>
+</nav>

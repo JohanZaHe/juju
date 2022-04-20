@@ -1,0 +1,61 @@
+<h2 mat-dialog-title>Character Details</h2>
+<mat-dialog-content class="mat-typography">
+  <div class="d-flex flex-row flex-wrap justify-content-center">
+    <div
+      class="mat-card-avatar-details"
+      [style.background-image]="'url(' + data.character.image + ')'"
+    ></div>
+  </div>
+  <div class="d-flex flex-row flex-wrap justify-content-center">
+    <div class="p-2 d-flex flex-column charater-details-column-size">
+      <b class="title-column">Name</b>
+      <span class="detail-column">{{ data.character.name }}</span>
+    </div>
+    <div class="p-2 d-flex flex-column charater-details-column-size">
+      <b class="title-column">Status</b>
+      <span class="detail-column">{{ data.character.status }}</span>
+    </div>
+  </div>
+  <div class="d-flex flex-row flex-wrap justify-content-center">
+    <div class="p-2 d-flex flex-column charater-details-column-size">
+      <b class="title-column">Species</b>
+      <span class="detail-column">{{ data.character.species }}</span>
+    </div>
+    <div class="p-2 d-flex flex-column charater-details-column-size">
+      <b class="title-column">Gender</b>
+      <span class="detail-column">{{ data.character.gender }}</span>
+    </div>
+  </div>
+  <div class="d-flex flex-row flex-wrap justify-content-center">
+    <div class="p-2 d-flex flex-column charater-details-column-size">
+      <b class="title-column">Type</b>
+      <span class="detail-column">{{
+        data.character.type || "Not specified"
+      }}</span>
+    </div>
+    <div class="p-2 d-flex flex-column charater-details-column-size">
+      <b class="title-column">Origin</b>
+      <span class="detail-column">{{ data.character.origin.name }}</span>
+    </div>
+  </div>
+
+  <div class="d-flex flex-row flex-wrap justify-content-center">
+    <div class="p-2 d-flex flex-column charater-details-column-size">
+      <b class="title-column">First Episode</b>
+      <span class="detail-column">{{
+        data.character.episode && data.character.episode[0]
+          ? (data.character.episode[0] | fetchData: "name" | async)
+          : ""
+      }}</span>
+    </div>
+    <div class="p-2 d-flex flex-column charater-details-column-size">
+      <b class="title-column">Last Location</b>
+      <span class="detail-column">{{
+        data.character.location ? data.character.location.name : ""
+      }}</span>
+    </div>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>

@@ -1,0 +1,22 @@
+ul {
+    list-style: none;
+    line-height: 72px;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-opt {
+    color: #bfbfbf;
+    text-decoration: none;
+}
+
+.active-menu-opt {
+    color: #2a0fc5;
+}
+
+.active-menu-opt::after {
+    content: '●';
+    position: relative;
+    color: #2a0fc5;
+    bottom: 17px;
+}

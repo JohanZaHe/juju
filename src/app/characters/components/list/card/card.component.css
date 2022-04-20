@@ -1,0 +1,65 @@
+.mat-card-avatar {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    object-fit: cover;
+    background-size: cover;
+}
+
+.charater-column-size {
+    max-width: 16.6%;
+    min-width: 16.6%
+}
+
+.detail-column {
+    font-size: 14px;
+}
+
+.title-column {
+    font-size: 16px;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+    /* CSS */
+
+}
+
+/* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+    /* CSS */
+    .charater-column-size {
+        max-width: 30%;
+        min-width: 30%
+    }
+
+}
+
+/* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    .charater-column-size {
+        max-width: 50%;
+        min-width: 50%
+    }
+
+}
